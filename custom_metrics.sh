@@ -9,7 +9,7 @@ export EC2_REGION=ap-northeast-1
 # export AWS_CREDENTIAL_FILE=/home/ubuntu/cloudwatch/credentia
 
 export AWS_CREDENTIAL_FILE=/home/ec2-user/cloudwatch/credential
-instanceid=i-****
+instanceId=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
 
 # http status check
 domain_list="/home/ec2-user/cloudwatch/domain_list.txt"
